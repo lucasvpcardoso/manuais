@@ -1,0 +1,253 @@
+<!DOCTYPE html><html><head>
+      <title>manualOperador</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.css">
+      
+      
+      
+      
+      
+      <style>
+      code[class*=language-],pre[class*=language-]{color:#333;background:0 0;font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.4;-moz-tab-size:8;-o-tab-size:8;tab-size:8;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:.8em;overflow:auto;border-radius:3px;background:#f5f5f5}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal;background:#f5f5f5}.token.blockquote,.token.comment{color:#969896}.token.cdata{color:#183691}.token.doctype,.token.macro.property,.token.punctuation,.token.variable{color:#333}.token.builtin,.token.important,.token.keyword,.token.operator,.token.rule{color:#a71d5d}.token.attr-value,.token.regex,.token.string,.token.url{color:#183691}.token.atrule,.token.boolean,.token.code,.token.command,.token.constant,.token.entity,.token.number,.token.property,.token.symbol{color:#0086b3}.token.prolog,.token.selector,.token.tag{color:#63a35c}.token.attr-name,.token.class,.token.class-name,.token.function,.token.id,.token.namespace,.token.pseudo-class,.token.pseudo-element,.token.url-reference .token.variable{color:#795da3}.token.entity{cursor:help}.token.title,.token.title .token.punctuation{font-weight:700;color:#1d3e81}.token.list{color:#ed6a43}.token.inserted{background-color:#eaffea;color:#55a532}.token.deleted{background-color:#ffecec;color:#bd2c00}.token.bold{font-weight:700}.token.italic{font-style:italic}.language-json .token.property{color:#183691}.language-markup .token.tag .token.punctuation{color:#333}.language-css .token.function,code.language-css{color:#0086b3}.language-yaml .token.atrule{color:#63a35c}code.language-yaml{color:#183691}.language-ruby .token.function{color:#333}.language-markdown .token.url{color:#795da3}.language-makefile .token.symbol{color:#795da3}.language-makefile .token.variable{color:#183691}.language-makefile .token.builtin{color:#0086b3}.language-bash .token.keyword{color:#0086b3}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:hsla(24,20%,50%,.08);background:linear-gradient(to right,hsla(24,20%,50%,.1) 70%,hsla(24,20%,50%,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:hsla(24,20%,50%,.4);color:#f4f1ef;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px #fff}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ol,html body>ul{margin-bottom:16px}html body ol,html body ul{padding-left:2em}html body ol.no-list,html body ul.no-list{padding:0;list-style-type:none}html body ol ol,html body ol ul,html body ul ol,html body ul ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:700;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::after,html body code::before{letter-spacing:-.2em;content:'\00a0'}html body pre>code{padding:0;margin:0;word-break:normal;white-space:pre;background:0 0;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:after,html body pre code:before,html body pre tt:after,html body pre tt:before{content:normal}html body blockquote,html body dl,html body ol,html body p,html body pre,html body ul{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body code,html body pre{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview ul{list-style:disc}.markdown-preview ul ul{list-style:circle}.markdown-preview ul ul ul{list-style:square}.markdown-preview ol{list-style:decimal}.markdown-preview ol ol,.markdown-preview ul ol{list-style-type:lower-roman}.markdown-preview ol ol ol,.markdown-preview ol ul ol,.markdown-preview ul ol ol,.markdown-preview ul ul ol{list-style-type:lower-alpha}.markdown-preview .newpage,.markdown-preview .pagebreak{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center!important}.markdown-preview:not([data-for=preview]) .code-chunk .code-chunk-btn-group{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .status{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0;min-height:100vh}@media screen and (min-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{font-size:14px!important;padding:1em}}@media print{html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% - 300px);padding:2em calc(50% - 457px - 300px / 2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+      <!-- The content below will be included at the end of the <head> element. --><script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function () {
+    // your code here
+  });
+</script></head><body for="html-export">
+    
+    
+      <div class="crossnote markdown-preview  ">
+      
+<h1 id="-manual-do-operador">🛠 Manual do Operador </h1>
+<blockquote>
+<p>Versão 1.0 | Atualizado em: 16/04/2025</p>
+</blockquote>
+<hr>
+<h2 id="-sumário">📌 Sumário </h2>
+<ol>
+<li><a href="#introdu%C3%A7%C3%A3o">Introdução</a></li>
+<li><a href="#acesso-ao-sistema">Acesso ao Sistema</a></li>
+<li><a href="#realizando-uma-pesagem">Realizando uma Pesagem</a></li>
+<li><a href="#tela-do-supervis%C3%B3rio">Tela do Supervisório</a></li>
+<li><a href="#erros-comuns-e-solu%C3%A7%C3%B5es">Erros Comuns e Soluções</a></li>
+<li><a href="#contato-e-suporte">Contato e Suporte</a></li>
+</ol>
+<hr>
+<h2 id="️-termos-de-uso">⚖️ Termos de Uso </h2>
+<p>Este manual, ou qualquer parte dele, <strong>não pode</strong> ser reproduzido, copiado, modificado ou distribuído sem autorização prévia e expressa da <strong>Saturno Smart</strong>. A Saturno Smart reserva‑se o direito de revisar e aprimorar seus produtos sempre que considerar necessário. Esta publicação reflete o estado do produto na <strong>data de sua emissão</strong> e pode não corresponder a futuras versões ou atualizações.</p>
+<hr>
+<h2 id="-introdução">🧾 Introdução </h2>
+<p>Este documento tem como finalidade instruir e guiar o operador na utilização adequada do software Ponto de Controle, abordando todas as funcionalidades que fazem parte do respectivo perfil de usuário, a fim de garantir a plena operação.</p>
+<hr>
+<h1 id="️-capítulo-1-acessos">⚙️ CAPÍTULO 1: ACESSOS </h1>
+<h2 id="-11-criação-do-acesso">📌 1.1 Criação do acesso </h2>
+<p>Após acesso a ferramenta, o operador pode criar um novo acesso de duas maneiras:</p>
+<ul>
+<li>
+<p>Através do menu Inicio, clique em "Novo Acesso"<br>
+<img src="./imagens/imgOperador/novo_acesso_inicio.png" alt="img"></p>
+</li>
+<li>
+<p>Através do menu Acessos, clique em "+ Novo"<br>
+<img src="./imagens/imgOperador/novo_acesso_acesso.png" alt="img"></p>
+</li>
+</ul>
+<p><strong>OBS:</strong> Os cadastros de Motoristas, Safras, Veículos, Produtos, Operações, Lavouras, Filiais, Transportadora e Parceiros a serem utilizados na criação do acesso podem ser criados atráves do menu "Cadastro", acesso Capitulo 2.</p>
+<h2 id="-12-seleção-da-rota">📌 1.2 Seleção da Rota </h2>
+<p>Após iniciar o processo de criação de acesso, conforme descrito no passo anterior, o usuário deverá selecionar a rota. A rota é utilizada para definir qual será o processo e quais pontos o usuário precisará seguir e executar dentro da unidade.<br>
+<img src="./imagens/imgOperador/selecao_da_rota.png" alt="img"></p>
+<h3 id="-121-rotas-padrão">📍 1.2.1 Rotas padrão </h3>
+<p>O sistema possui algumas rotas que são definidas por padrão no momento da instalação. As rotas podem ser modificadas e criadas de acordo com a necessidade do cliente. Dentre as rotas padrão estão:</p>
+<h4 id="-1211-pesagem-tara-x-bruto">📍 1.2.1.1 Pesagem Tara x Bruto </h4>
+<p>A pesagem Tara x Bruto é o método padrão de pesagem, no qual consiste em tirar a tara do caminhão seja com o peso cheio ou vazio do caminhão e na segunda pesagem se tira  a diferença do mesmo, sobrando assim o peso líquido.</p>
+<h4 id="-1212-pesagem-fracionada">📍 1.2.1.2 Pesagem Fracionada </h4>
+<p>A rota fracionada é utilizada quando um veículo transporta mais de um produto. Nesse caso, o software é capaz de identificar o peso de cada produto individualmente.</p>
+<h4 id="-1213-pesagem-avulsa">📍 1.2.1.3 Pesagem Avulsa </h4>
+<p>A pesagem avulsa é um método simples que consiste em realizar uma única pesagem, medindo apenas o peso bruto, sem a aplicação de qualquer tara.</p>
+<h4 id="-1214-pesagem-carregamento">📍 1.2.1.4 Pesagem Carregamento </h4>
+<p>Esse método consiste em realizar o carregamento da carga com o caminhão em cima da balança. Ou seja, o mesmo acesso fará a tara e iniciará o processo de carregamento. Após finalizado, será realizada a pesagem do bruto — todo esse processo ocorre sem que o caminhão saia da balança. A finalização pode ser feita de duas formas: manualmente, com o operador selecionando a conclusão da operação no botão de "Concluir carregamento", ou automaticamente, por meio da definição de uma conferência de carga na criação do acesso.</p>
+<h4 id="-1215-pesagem-atualiza-tara">📍 1.2.1.5 Pesagem Atualiza Tara </h4>
+<p>Esse método de pesagem tem como objetivo registrar uma tara para o veículo, que será aplicada automaticamente em pesagens futuras. Caso seja necessário adicionar uma tara extra além da registrada automaticamente, consulte o Capítulo 2.</p>
+<h4 id="-1216-pesagem-utiliza-tara">📍 1.2.1.6 Pesagem Utiliza Tara </h4>
+<p>Esse método de pesagem tem como função utilizar a tara de algum veículo estabelecido anteriormente, como demonstrado no tópico Pesagem Atualiza Tara ou que tenha sido definida pelo usuário.</p>
+<h4 id="-1217-passagem-livre">📍 1.2.1.7 Passagem Livre </h4>
+<p>O método de passagem livre é utilizado quando uma balança é usada como uma portaria, em que será realizada a leitura da tag, abrirá as cancelas e quando a balança for zerada, as cancelas fecharão novamente.</p>
+<h4 id="-1218-pesagem-livre">📍 1.2.1.8 Pesagem Livre </h4>
+<p>O método de pesagem livre apenas pesa o veículo com as cancelas abertas e exibe o peso capturado no display. Não é armazenado o peso do veículo.</p>
+<h2 id="-13-identificação">📌 1.3 Identificação </h2>
+<p>Neste formulário estão as informações de identificação de quem irá acessar a unidade. Preencha o formulário de acordo com a necessidade.<br>
+<strong>OBS:</strong> Os Campos que possuem "*" são de caráter obrigatório.<br>
+<img src="./imagens/imgOperador/identificacao.png" alt="img"></p>
+<h3 id="-131-tag">🔖 1.3.1 Tag </h3>
+<p>A <strong>Tag</strong> é um cartão magnético que será lido via RFID, identificando automaticamente o acesso que está sendo criado. O preenchimento deste campo pode ser feito de três formas: manualmente (digitando o número da tag), utilizando o leitor de mesa ou por meio da urna eletrônica.</p>
+<h4 id="1311-leitura-da-tag-com-leitor-de-mesa">1.3.1.1 Leitura da Tag com leitor de mesa </h4>
+<p>Para utilizar o leitor de mesa, posicione o cursor do mouse sobre o campo <strong>"Tag"</strong> e aproxime a tag física do leitor.<br>
+<img src="./imagens/imgOperador/leitor_de_mesa.png" alt="img"></p>
+<h4 id="1312-emissão-da-tag-via-urna">1.3.1.2 Emissão da Tag via urna </h4>
+<p>Para utilizar a urna, clique em <strong>"Emitir Tag"</strong>, selecione a urna desejada (caso existam múltiplas opções) e clique novamente em <strong>"Emitir Tag"</strong> para concluir a emissão.<br>
+<img src="./imagens/imgOperador/urna.png" alt="img"></p>
+<h2 id="-14-carga">📌 1.4 Carga </h2>
+<p>Neste formulário estão as informações da carga transportada pelo veículo. Preencha o formulário de acordo com a necessidade.<br>
+<strong>OBS:</strong> Os Campos que possuem "*" são de caráter obrigatório.<br>
+<img src="./imagens/imgOperador/carga.png" alt="img"></p>
+<h2 id="-15-pesagem">📌 1.5 Pesagem </h2>
+<p>Neste formulário devem ser definidos os parâmetros da pesagem, incluindo a opção de utilizar ou não a conferência de carga. Após realizar essa definição, clique em "Avançar" para prosseguir.</p>
+<h3 id="-151-conferência-de-carga">📦 1.5.1 Conferência de Carga </h3>
+<p>A conferência de carga é um procedimento que estabelece um peso desejado e uma tolerância específica. Assim, o veículo só é liberado para saída se o peso estiver dentro dos limites pré-definidos. Esse processo pode ser realizado de três maneiras:</p>
+<ul>
+<li>Peso Bruto: Considera a soma do peso do caminhão e da carga.</li>
+<li>Peso Subtotal: Desconsidera o peso do veículo e avalia apenas o peso da carga.</li>
+<li>Peso Líquido: Confere o peso da carga após aplicação dos descontos selecionados.</li>
+</ul>
+<p><strong>OBS:</strong> Este processo pode ser automatizado utilizando a funcionalidade de Regras, ou seja, sem a interferência humana baseando-se em informações do sistema.</p>
+<h3 id="-152-criação-do-acesso-com-conferência-de-carga">📦 1.5.2 Criação do acesso com Conferência de Carga </h3>
+<p>Para criar um acesso com conferência de carga, o usuário deve selecionar um dos modos de conferência no formulário "Pesagem". Após isso, é necessário preencher o campo Valor Desejado, conforme o modo escolhido; Bruto: preencher com o valor do peso bruto esperado. Subtotal: preencher com o peso da carga antes dos descontos. Líquido: preencher com o peso final da carga, já descontados os valores de perdas ou abatimentos.<br>
+Além disso, no campo de Tolerância, deve-se definir os valores mínimo e máximo permitidos de variação para o peso, indicando a margem de erro aceitável em relação ao valor desejado.<br>
+<img src="./imagens/imgOperador/conferencia_de_carga.png" alt="img"></p>
+<h2 id="-16-visualização-dos-acessos">📌 1.6 Visualização dos Acessos </h2>
+<p>No menu "Acessos", o operador pode visualizar todos os acessos criados no sistema, obtendo uma visão geral das informações e do estado de cada um, que pode ser "Aberto", "Concluído" ou "Cancelado". Para acessar o menu, basta clicar em "Acessos" na barra lateral.<br>
+<img src="./imagens/imgOperador/acessos.png" alt="img"></p>
+<p>É possível filtrar os acessos através da barra superior. Os filtros podem ser feitos por: ID do acesso, intervalo de datas, processo, TAG, placa do veículo e status do acesso.<br>
+<img src="./imagens/imgOperador/filtros.png" alt="img"></p>
+<h3 id="-161-visualização-dos-acessos-individual">📝 1.6.1 Visualização dos Acessos individual </h3>
+<p>Para visualizar individualmente um acesso, clique no ícone de lápis ou no número do acesso.<br>
+<img src="./imagens/imgOperador/vis_acesso.png" alt="img"></p>
+<p>Na visualização individual de um acesso, é possível consultar informações detalhadas sobre ele:<br>
+<img src="./imagens/imgOperador/acesso_individual.png" alt="img"></p>
+<ul>
+<li>
+<p><strong>Seção 1:</strong> exibe dados do processo ao qual o acesso foi designado, como estado, tag, data de criação, entre outros.</p>
+<ul>
+<li><strong>Relatórios:</strong> É possível visualizar os tickets do acesso: um contendo as fotos da pesagem, outro com os canhotos, e outro com dados das portarias, também com imagens.<br>
+No <strong>Histórico de eventos</strong>, são listadas todas as alterações feitas no acesso.<br>
+<img src="./imagens/imgOperador/secao_1.png" alt="img"></li>
+</ul>
+</li>
+<li>
+<p><strong>Seção 2:</strong> mostra os pontos da rota e seus respectivos status:</p>
+<ul>
+<li>✅ <strong>Verde com check:</strong> ponto concluído com sucesso.</li>
+<li>⚖️ <strong>Laranja com balança:</strong> divergência de carga.</li>
+<li>🧍 <strong>Verde com boneco:</strong> ponto concluído manualmente por um usuário.</li>
+</ul>
+</li>
+<li>
+<p><strong>Seção 3:</strong> apresenta informações do veículo, transportadora e parâmetros da pesagem.</p>
+<ul>
+<li><strong>Veículo:</strong> permite visualizar os dados em detalhes e editar as informações do cadastro (exceto a placa, que não pode ser alterada).</li>
+<li><strong>Transportadora:</strong> é possível alterar a transportadora ou atualizar os dados da atual.</li>
+<li><strong>Carga:</strong> permite editar os dados da conferência de carga. O procedimento segue o descrito no tópico 1.5.1.<br>
+<strong>OBS:</strong> para que essa alteração tenha efeito, ela deve ser feita antes da segunda pesagem.<br>
+<img src="./imagens/imgOperador/secao_2.png" alt="img"></li>
+</ul>
+</li>
+<li>
+<p><strong>Seção 4:</strong> exibe os dados da pesagem.</p>
+<ul>
+<li><strong>Segunda via:</strong> permite emitir a segunda via dos tickets e do ticket térmico (selecione a impressora desejada, caso haja mais de uma).<br>
+<img src="./imagens/imgOperador/secao_3.png" alt="img"></li>
+</ul>
+</li>
+<li>
+<p><strong>Seção 5:</strong> traz as informações do motorista.</p>
+<ul>
+<li>É possível visualizar os dados em detalhes e alterar o motorista ou atualizar suas informações associadas ao acesso.</li>
+</ul>
+</li>
+<li>
+<p><strong>Seção 6:</strong> contém os dados do produto.</p>
+</li>
+</ul>
+<hr>
+<h1 id="️-capítulo-2-cadastros">⚙️ CAPÍTULO 2: CADASTROS </h1>
+<h2 id="-21-criação-do-cadastros">📌 2.1 Criação do Cadastros </h2>
+<p>Para criar os cadastros utilizados na criação do acesso, acesse o menu "Cadastro", localizado na barra lateral.<br>
+<img src="./imagens/imgOperador/cadastros.png" alt="img"></p>
+<h3 id="-211-cadastro-do-motorista">📝 2.1.1 Cadastro do Motorista </h3>
+<p>No menu “Cadastros”, no submenu “Motoristas”, entrar na aba “Motoristas” e clicar em “Novo”.<br>
+<img src="./imagens/imgOperador/cadastro_mot.png" alt="img"></p>
+<p>Preencher os campos com os dados do motorista conforme o desejado.<br>
+<strong>OBS:</strong> Os campos com "*" são obrigatórios<br>
+<img src="./imagens/imgOperador/mot_1.png" alt="img"><br>
+<strong>OBS:</strong> Em caso de integração utilizar o campo código com mesmo valor utilizado no ERP.</p>
+<h3 id="-212-cadastro-de-veículos">📝 2.1.2 Cadastro de Veículos </h3>
+<p>No menu “Cadastros”, no submenu “Veículos” clique em “Novo”.<br>
+<img src="./imagens/imgOperador/cadastro_vei.png" alt="img"></p>
+<p>Preencher os campos com os dados do motorista conforme o desejado.<br>
+<strong>OBS:</strong> Os campos com "*" são obrigatórios<br>
+<img src="./imagens/imgOperador/cad_1_.png" alt="img"><br>
+<strong>OBS:</strong> Em caso de integração utilizar o campo código com mesmo valor utilizado no ERP.</p>
+<h3 id="-213-cadastro-de-produtos">📝 2.1.3 Cadastro de Produtos </h3>
+<p>No menu “Cadastros”, no submenu “Produtos” clique em “Novo”.<br>
+<img src="./imagens/imgOperador/cadastro_pro.png" alt="img"></p>
+<p>Preencher os campos com os dados do motorista conforme o desejado.<br>
+<strong>OBS:</strong> Os campos com "*" são obrigatórios<br>
+<img src="./imagens/imgOperador/pro_1_.png" alt="img"><br>
+<strong>OBS:</strong> Em caso de integração utilizar o campo código com mesmo valor utilizado no ERP.</p>
+<hr>
+<h1 id="️-capítulo-3-monitoramento">⚙️ CAPÍTULO 3: MONITORAMENTO </h1>
+<h2 id="-31-histórico-de-webhooks">📌 3.1 Histórico de WebHooks </h2>
+<p>Nesta aba se encontra um histórico de todos os webhooks enviados, cancelados e em aberto que foram enviados para uma ERP. Sendo possível filtrar por: ID, acesso, data de início e fim, e pelo status do webhook. Para acessar a tela de Histórico de WebHooks, a partir do menu lateral, clique no menu “Monitoramento” e em seguida clique no submenu “Histórico de WebHooks”.  Também pode ser visto o acesso através da tela de Histórico de WebHooks.<br>
+<img src="./imagens/imgOperador/his_web1.jpg" alt="img"></p>
+<p>Em caso de erro do webhook é possível ver qual o erro através dessa tela, para isso filtre os webhooks com erro, clique nos “tres pontinhos” e em seguida em “Detalhes”.<br>
+<img src="./imagens/imgOperador/erro_web1.jpg" alt="img"></p>
+<p>Após isso, clique na setinha para expandir e ter acesso ao código de<br>
+erro completo.<br>
+<img src="./imagens/imgOperador/erro_web2.jpg" alt="img"></p>
+<h2 id="-32-histórico-de-emails">📌 3.2 Histórico de Emails </h2>
+<p>Nesta tela se encontram todos os emails que foram enviados pelo Ponto de Controle. Também é possível filtrar os emails enviados por ID, intervalo de datas e também pelo status.Para acessar, a partir do menu “Monitoramento”, clique no submenu “Histórico de Emails”.<br>
+<img src="./imagens/imgOperador/email.jpg" alt="img"></p>
+<h2 id="-32-histórico-de-sms">📌 3.2 Histórico de SMS </h2>
+<p>Essa tela consiste em reunir todos os SMS enviados aos motoristas através da sala de espera, além de poder ler cada mensagem individualmente. Os SMS podem ser filtrados de acordo com o número do acesso, motorista, intervalo entre datas e status. Para acessar essa tela, a partir do menu lateral, clique no menu “Monitoramento” e em seguida no submenu “Histórico de SMS”.<br>
+<img src="./imagens/imgOperador/sms.jpg" alt="img"></p>
+<hr>
+<h1 id="️-capítulo-4-sala-de-espera">⚙️ CAPÍTULO 4: SALA DE ESPERA </h1>
+<h2 id="-41-sala-de-espera---operacional">📌 4.1 Sala de Espera - Operacional </h2>
+<p>O supervisório operacional da sala de espera é uma página em que se encontram todos os veículos que estão no ponto da sala de espera aguardando serem chamados.<br>
+<img src="./imagens/imgOperador/sala_de_espera.jpg" alt="img"></p>
+<h3 id="-411-filtros">🔍 4.1.1 Filtros </h3>
+<p>No supervisório operacional é possível filtrar o veículo selecionando o filtro desejado através da parte superior da tela, sendo possível selecionar o processo, modelo do veículo e produto, além de, pesquisar diretamente pela placa do veículo e pelo cliente desejado.<br>
+<img src="./imagens/imgOperador/filtros_sala.jpg" alt="img"></p>
+<h3 id="-412-ordenação">🔃 4.1.2 Ordenação </h3>
+<p>No supervisório operacional, os veículos podem ser ordenados de acordo com as necessidades do usuário, assim rearranjando a ordem de veículos a serem chamados, podendo ser em ordem crescente ou decrescente. Os veículos podem ser ordenados de acordo com a posição, número do acesso, processo, modelo do veículo, peso, produto, cliente e data e hora em que foi adicionado.<br>
+<img src="./imagens/imgOperador/ordem_sala.jpg" alt="img"></p>
+<h3 id="-412-chamando-motoristas">📢 4.1.2 Chamando Motoristas </h3>
+<p>Para chamar motoristas pode ser feito de duas maneiras, a primeira delas é através do botão “Chamar Próximo” que se encontra no canto superior direito da tela de sala de espera, esse botão vai chamar o veículo que se encontra no topo da lista, de acordo com a ordenação definida pelo usuário.<br>
+<img src="./imagens/imgOperador/cha_sala.jpg" alt="img"></p>
+<p>Além disso, ao chamar o próximo motorista também é enviado um SMS padrão para o número cadastrado do motorista (Desde que esteja cadastrado um provedor SMS).<br>
+<img src="./imagens/imgOperador/img_sms.jpg" alt="img"></p>
+<p>A outra maneira de chamar um veículo é pelo botão “Chamar” correspondente ao veículo. Além dessas maneiras, também pode ser enviado um SMS personalizado diretamente ao número do motorista cadastrado.<br>
+<img src="./imagens/imgOperador/cha_manual.jpg" alt="img"></p>
+<p>É possível enviar um SMS personalizado para vários motoristas ao mesmo tempo de forma simples e rápida. Para isso, acesse a lista de motoristas, selecione os acessos correspondentes aos motoristas que deverão receber a mensagem e, em seguida, clique no botão “SMS” localizado no canto superior direito da tela.<br>
+<img src="./imagens/imgOperador/cha_manual_var.jpg" alt="img"></p>
+<p>Uma nova janela será exibida para que você digite a mensagem desejada e confirme o envio. Dessa forma, todos os motoristas selecionados receberão o SMS simultaneamente.<br>
+<img src="./imagens/imgOperador/mensagem_sms.jpg" alt="img"></p>
+<h2 id="-42-sala-de-espera---supervisório">📌 4.2 Sala de Espera - Supervisório </h2>
+<p>O supervisório de chamados é uma tela que se encontra fisicamente na sala de espera e indica qual veículo está sendo chamado e para onde o mesmo deve se dirigir. Assim como um painel exibindo quais foram os chamados anteriores.<br>
+<img src="./imagens/imgOperador/super_sala.jpg" alt="img"></p>
+<p>O supervisório de chamados pode ser acessado através da tela inicial, basta clicar no botão de Sala de Espera.<br>
+<img src="./imagens/imgOperador/super_acess.jpg" alt="img"></p>
+<hr>
+<h1 id="️-capítulo-5-ao-vivo">⚙️ CAPÍTULO 5: AO VIVO </h1>
+<h2 id="-51-ao-vivo">📌 5.1 Ao Vivo </h2>
+<p>Nesta tela, se encontram todos os acessos que foram iniciados de alguma forma em tempo real, contendo informações de entrada e saída. Para acessar essa tela, basta clicar em “Ao Vivo” no menu lateral.<br>
+<img src="./imagens/imgOperador/ao_vivo.jpg" alt="img"></p>
+<hr>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+  
+    </body></html>
