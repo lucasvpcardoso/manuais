@@ -3,7 +3,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.css">
+      <link rel="stylesheet" href="file:///c:\Users\Alisson\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.8.18\crossnote\dependencies\katex\katex.min.css">
       
       
       
@@ -225,7 +225,7 @@ erro completo.<br>
 <p>A outra maneira de chamar um veículo é pelo botão “Chamar” correspondente ao veículo. Além dessas maneiras, também pode ser enviado um SMS personalizado diretamente ao número do motorista cadastrado.<br>
 <img src="./imagens/imgOperador/cha_manual.jpg" alt="img"></p>
 <p>É possível enviar um SMS personalizado para vários motoristas ao mesmo tempo de forma simples e rápida. Para isso, acesse a lista de motoristas, selecione os acessos correspondentes aos motoristas que deverão receber a mensagem e, em seguida, clique no botão “SMS” localizado no canto superior direito da tela.<br>
-<img src="./imagens/imgOperador/cha_manual_var.jpg" alt="img"></p>
+<img src="./imagens/imgOperador/cha_sms_var.jpg" alt="img"></p>
 <p>Uma nova janela será exibida para que você digite a mensagem desejada e confirme o envio. Dessa forma, todos os motoristas selecionados receberão o SMS simultaneamente.<br>
 <img src="./imagens/imgOperador/mensagem_sms.jpg" alt="img"></p>
 <h2 id="-42-sala-de-espera---supervisório">📌 4.2 Sala de Espera - Supervisório </h2>
@@ -238,6 +238,88 @@ erro completo.<br>
 <h2 id="-51-ao-vivo">📌 5.1 Ao Vivo </h2>
 <p>Nesta tela, se encontram todos os acessos que foram iniciados de alguma forma em tempo real, contendo informações de entrada e saída. Para acessar essa tela, basta clicar em “Ao Vivo” no menu lateral.<br>
 <img src="./imagens/imgOperador/ao_vivo.jpg" alt="img"></p>
+<hr>
+<h1 id="️-capítulo-6-supervisório">⚙️ CAPÍTULO 6: SUPERVISÓRIO </h1>
+<h2 id="-61-supervisório-da-balança">📌 6.1 Supervisório da Balança </h2>
+<p>O supervisório da balança permite acompanhar a pesagem em tempo real e executar ações de contingência, caso necessário. Ao iniciar uma pesagem, o peso do veículo é exibido em tempo real no centro da tela. À direita, são apresentadas as informações relacionadas ao acesso, como dados do veículo, motorista e carga. Na parte inferior da tela, é exibido o status atual da balança, indicando em que etapa do processo ela se encontra. Os possíveis estados da balança são:</p>
+<ul>
+<li>Aguardando identificação: estado inicial da balança, aguardando o início do processo de pesagem.</li>
+<li>Aguarda posicionamento: a balança aguarda que o veículo esteja corretamente posicionado sobre ela.</li>
+<li>Pesando: a balança aguarda a estabilização do peso para realizar a captura.</li>
+<li>Aguarda saída: a pesagem foi concluída e o sistema aguarda que o veículo saia da balança.</li>
+</ul>
+<h2 id="-62-contingências-manuais">📌 6.2 Contingências Manuais </h2>
+<p>Dentro do supervisório, ao clicar no ícone de engrenagem, é possível acessar as ações de contingência. Essas ações permitem ao operador realizar procedimentos manuais em situações específicas, como falhas operacionais ou necessidades excepcionais.<br>
+<img src="./imagens/imgOperador/supervisorio.png" alt="img"></p>
+<ul>
+<li>
+<p><strong>Abertura Manual:</strong> Permite a abertura manual das cancelas da balança. O operador pode escolher entre abrir o Lado A, Lado B ou Ambos os Lados. Após a passagem do veículo, as cancelas se fecharão automaticamente, retornando o sistema ao estado padrão.<br>
+Para realizar essa ação, é necessário:</p>
+<ul>
+<li>Informar o usuário e senha.</li>
+<li>Preencher a placa do veículo que irá passar pela balança.</li>
+<li>Selecionar o motivo da abertura.<br>
+<img src="./imagens/imgOperador/abertura_manual.png" alt="img"></li>
+</ul>
+</li>
+<li>
+<p><strong>Pesagem Manual:</strong> Utilizada quando é necessário registrar uma pesagem manualmente, como em casos de falha na pesagem automática ou necessidade de uma pesagem avulsa.<br>
+Requisitos:</p>
+<ul>
+<li>O veículo deve ter um acesso em aberto.</li>
+<li>Deve estar posicionado no ponto de balança dentro da rota.</li>
+</ul>
+<p>Para realizar a pesagem manual:</p>
+<ul>
+<li>Informe o usuário e senha.</li>
+<li>Digite a placa do veículo.</li>
+<li>Selecione o lado de entrada (caso o veículo já esteja na balança, qualquer lado pode ser selecionado — o sistema identificará automaticamente).<br>
+<img src="./imagens/imgOperador/pesagem_manual.png" alt="img"></li>
+</ul>
+</li>
+<li>
+<p><strong>Liberação de Fluxo:</strong> Permite liberar temporariamente o fluxo da balança, abrindo as cancelas sem registrar a pesagem. O processo normal será retomado somente quando o operador encerrar essa liberação.<br>
+Para utilizar:</p>
+<ul>
+<li>Informe o usuário e senha.</li>
+<li>Preencha o motivo.</li>
+<li>Clique em <strong>Liberar Fluxo (Abrir)</strong>.</li>
+</ul>
+<p>Para retomar o processo de pesagem:</p>
+<ul>
+<li>Siga o mesmo caminho e clique em <strong>Retomar Pesagens (Fechar)</strong>.<br>
+<img src="./imagens/imgOperador/lib_fluxo.png" alt="img"></li>
+</ul>
+</li>
+<li>
+<p><strong>Bloquear Balança:</strong> Semelhante à liberação de fluxo, porém neste caso as cancelas permanecem fechadas, impedindo a entrada de veículos até que o bloqueio seja removido.<br>
+Para bloquear:</p>
+<ul>
+<li>Clique em <strong>Bloquear Balança</strong>.</li>
+</ul>
+<p>Para desbloquear:</p>
+<ul>
+<li>Clique em <strong>Desbloquear Balança</strong>.<br>
+<img src="./imagens/imgOperador/bloque_bal.png" alt="img"></li>
+</ul>
+</li>
+</ul>
+<h2 id="-63-dispositivos">📌 6.3 Dispositivos </h2>
+<p>No ícone de engrenagem do supervisório, é possível acessar o menu Dispositivos.<br>
+<img src="./imagens/imgOperador/super_disp.png" alt="img"></p>
+<p>Neste menu, o operador pode acompanhar o estado de cada dispositivo da balança, verificando se estão online ou offline.<br>
+<img src="./imagens/imgOperador/dispo.png" alt="img"></p>
+<h2 id="-63-abertura-manual">📌 6.3 Abertura Manual </h2>
+<p>Existe também um processo de abertura manual disponível fora do supervisório, através do menu Iniciar. Essa abertura é voltada principalmente para as portarias, mas também pode ser utilizada para a balança, se necessário. Clique no ícone de portaria, localizado ao lado do botão de logout.<br>
+<img src="./imagens/imgOperador/open_manul.png" alt="img"></p>
+<p>Para realizar a abertura:</p>
+<ul>
+<li>Selecione o ponto de controle (ex: Portaria ou Balança).</li>
+<li>Informe a placa do veículo.</li>
+<li>Selecione o motivo da abertura.</li>
+<li>Clique em Abrir.<br>
+<img src="./imagens/imgOperador/modal_open.png" alt="img"></li>
+</ul>
 <hr>
 
       </div>

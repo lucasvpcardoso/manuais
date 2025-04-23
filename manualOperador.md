@@ -239,7 +239,7 @@ A outra maneira de chamar um veículo é pelo botão “Chamar” correspondente
 ![img](./imagens/imgOperador/cha_manual.jpg)
 
 É possível enviar um SMS personalizado para vários motoristas ao mesmo tempo de forma simples e rápida. Para isso, acesse a lista de motoristas, selecione os acessos correspondentes aos motoristas que deverão receber a mensagem e, em seguida, clique no botão “SMS” localizado no canto superior direito da tela.
-![img](./imagens/imgOperador/cha_manual_var.jpg)
+![img](./imagens/imgOperador/cha_sms_var.jpg)
 
 Uma nova janela será exibida para que você digite a mensagem desejada e confirme o envio. Dessa forma, todos os motoristas selecionados receberão o SMS simultaneamente.
 ![img](./imagens/imgOperador/mensagem_sms.jpg)
@@ -258,5 +258,72 @@ O supervisório de chamados pode ser acessado através da tela inicial, basta cl
 ## 📌 5.1 Ao Vivo
 Nesta tela, se encontram todos os acessos que foram iniciados de alguma forma em tempo real, contendo informações de entrada e saída. Para acessar essa tela, basta clicar em “Ao Vivo” no menu lateral.
 ![img](./imagens/imgOperador/ao_vivo.jpg)
+
+---
+
+# ⚙️ CAPÍTULO 6: SUPERVISÓRIO
+
+## 📌 6.1 Supervisório da Balança
+O supervisório da balança permite acompanhar a pesagem em tempo real e executar ações de contingência, caso necessário. Ao iniciar uma pesagem, o peso do veículo é exibido em tempo real no centro da tela. À direita, são apresentadas as informações relacionadas ao acesso, como dados do veículo, motorista e carga. Na parte inferior da tela, é exibido o status atual da balança, indicando em que etapa do processo ela se encontra. Os possíveis estados da balança são:
+
+ - Aguardando identificação: estado inicial da balança, aguardando o início do processo de pesagem.
+ - Aguarda posicionamento: a balança aguarda que o veículo esteja corretamente posicionado sobre ela.
+ - Pesando: a balança aguarda a estabilização do peso para realizar a captura.
+ - Aguarda saída: a pesagem foi concluída e o sistema aguarda que o veículo saia da balança.
+
+## 📌 6.2 Contingências Manuais
+Dentro do supervisório, ao clicar no ícone de engrenagem, é possível acessar as ações de contingência. Essas ações permitem ao operador realizar procedimentos manuais em situações específicas, como falhas operacionais ou necessidades excepcionais.
+![img](./imagens/imgOperador/supervisorio.png)
+
+  - **Abertura Manual:** Permite a abertura manual das cancelas da balança. O operador pode escolher entre abrir o Lado A, Lado B ou Ambos os Lados. Após a passagem do veículo, as cancelas se fecharão automaticamente, retornando o sistema ao estado padrão.
+  Para realizar essa ação, é necessário:
+    - Informar o usuário e senha.
+    - Preencher a placa do veículo que irá passar pela balança.
+    - Selecionar o motivo da abertura.
+  ![img](./imagens/imgOperador/abertura_manual.png)
+  - **Pesagem Manual:** Utilizada quando é necessário registrar uma pesagem manualmente, como em casos de falha na pesagem automática ou necessidade de uma pesagem avulsa.
+  Requisitos:
+    - O veículo deve ter um acesso em aberto.
+    - Deve estar posicionado no ponto de balança dentro da rota.
+
+    Para realizar a pesagem manual:
+      - Informe o usuário e senha.
+      - Digite a placa do veículo.
+      - Selecione o lado de entrada (caso o veículo já esteja na balança, qualquer lado pode ser selecionado — o sistema identificará automaticamente).
+  ![img](./imagens/imgOperador/pesagem_manual.png)
+  - **Liberação de Fluxo:** Permite liberar temporariamente o fluxo da balança, abrindo as cancelas sem registrar a pesagem. O processo normal será retomado somente quando o operador encerrar essa liberação.
+  Para utilizar:
+    - Informe o usuário e senha.
+    - Preencha o motivo.
+    - Clique em **Liberar Fluxo (Abrir)**.
+
+    Para retomar o processo de pesagem:
+    - Siga o mesmo caminho e clique em **Retomar Pesagens (Fechar)**.
+  ![img](./imagens/imgOperador/lib_fluxo.png)
+  - **Bloquear Balança:** Semelhante à liberação de fluxo, porém neste caso as cancelas permanecem fechadas, impedindo a entrada de veículos até que o bloqueio seja removido.
+  Para bloquear:
+    - Clique em **Bloquear Balança**.
+
+    Para desbloquear:
+    - Clique em **Desbloquear Balança**.
+  ![img](./imagens/imgOperador/bloque_bal.png)
+
+## 📌 6.3 Dispositivos
+No ícone de engrenagem do supervisório, é possível acessar o menu Dispositivos.
+![img](./imagens/imgOperador/super_disp.png)
+
+Neste menu, o operador pode acompanhar o estado de cada dispositivo da balança, verificando se estão online ou offline.
+![img](./imagens/imgOperador/dispo.png)
+
+## 📌 6.3 Abertura Manual
+Existe também um processo de abertura manual disponível fora do supervisório, através do menu Iniciar. Essa abertura é voltada principalmente para as portarias, mas também pode ser utilizada para a balança, se necessário. Clique no ícone de portaria, localizado ao lado do botão de logout.
+![img](./imagens/imgOperador/open_manul.png)
+
+  Para realizar a abertura:
+   - Selecione o ponto de controle (ex: Portaria ou Balança).
+   - Informe a placa do veículo.
+   - Selecione o motivo da abertura.
+   - Clique em Abrir.
+![img](./imagens/imgOperador/modal_open.png)
 
 ---
