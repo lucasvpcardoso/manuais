@@ -9,7 +9,6 @@
 - [Termos de Uso](#tdu)
 - [Introdução](#int)
 
-
 - [1. Arquivos Necessários](#cap1)
 - [2. Instalação](#cap2)
 - [3. Instalação MySQL](#cap3)
@@ -19,22 +18,21 @@
 - [7. Integração do Ponto de Controle com o GATEC](#cap7)
 - [8. Instalação e Configuração do IntegradorGATEC](#cap8)
 
-
 ---
 
-## ⚖️ Termos de Uso {#tdu}
+## ⚖️ Termos de Uso
 
 Este manual, ou qualquer parte dele, **não pode** ser reproduzido, copiado, modificado ou distribuído sem autorização prévia e expressa da **Saturno Smart**. A Saturno Smart reserva‑se o direito de revisar e aprimorar seus produtos sempre que considerar necessário. Esta publicação reflete o estado do produto na **data de sua emissão** e pode não corresponder a futuras versões ou atualizações.
 
 ---
 
-## 🧾 Introdução {#int}
+## 🧾 Introdução
 
-Este documento tem como finalidade instruir e guiar o operador na instalação adequada do software Ponto de Controle, assim como a integração com o software GATEC. 
+Este documento tem como finalidade instruir e guiar o operador na instalação adequada do software Ponto de Controle, assim como a integração com o software GATEC.
 
 ---
 
-## 📁 1. Arquivos Necessários {#cap1}
+## 📁 1. Arquivos Necessários
 
 Todos os arquivos necessarios para a instalação do Ponto de Controle com integração com o GATEC se encontram na pasta dispbonibilizada pela equipe da Saturno Smart.
 
@@ -42,19 +40,19 @@ Todos os arquivos necessarios para a instalação do Ponto de Controle com integ
 
 ---
 
-## ⚙️ 2. Instalação {#cap2}
+## ⚙️ 2. Instalação
 
 O primeiro passo para instalar o Ponto de Controle é criar a pasta "SMART" no caminho "C:\" ou "D:\".
 
 ![img](./imagens/imgInstalacao/pasta_smart.png)
 
-Dentro da pasta "SMART" copie os arquivos disponibilizados pela equipe da Saturno Smart e descompacte-os. 
+Dentro da pasta "SMART" copie os arquivos disponibilizados pela equipe da Saturno Smart e descompacte-os.
 
 ![img](./imagens/imgInstalacao/arquivos_descompactados.png)
 
 ---
 
-## 🐬 3. Instalação MySQL {#cap3}
+## 🐬 3. Instalação MySQL
 
 Utilizar o arquivo “mysql” fornecido na pasta de instalação e seguir as instruções do “Tutorial_de_instalação_Mysql.pdf”, disponível na pasta de instalação.
 
@@ -62,7 +60,7 @@ Utilizar o arquivo “mysql” fornecido na pasta de instalação e seguir as in
 
 ---
 
-## 🗄️ 4. Criação do banco de dados do Ponto de Controle {#cap4}
+## 🗄️ 4. Criação do banco de dados do Ponto de Controle
 
 Após instalação do Mysql, abrir o arquivo pc_v3_template.sql (disponível na pasta “PontoDeControle”) com o bloco de notas.
 ![img](./imagens/imgInstalacao/instalacao_banco.jpg)
@@ -80,7 +78,7 @@ Após criar a query, execute-a clicando no ícone de raio no canto superior esqu
 
 ---
 
-## 🏗️ 5 Criando banco "gatec_smart" {#cap5}
+## 🏗️ 5 Criando banco "gatec_smart"
 
 Crie o banco de dados "gatec_smart" para que o time do GATEC execute o script deles. Para isso:
 
@@ -98,7 +96,7 @@ Crie o banco de dados "gatec_smart" para que o time do GATEC execute o script de
 
 ---
 
-## 🦾 6. Instalação do Oracle {#cap6}
+## 🦾 6. Instalação do Oracle
 
 Descompacte o arquivo "oracle.rar" que se encontra disponivel na pasta de instalação clicando com o botão direito no arquivo e selecione a opção "Extrair aqui".
 ![img](./imagens/imgInstalacao/instalacao_oracle.png)
@@ -116,13 +114,13 @@ no “config”. asdvkçJABSo
 
 ---
 
-## 🧩 7. Instalação do Ponto de Controle {#cap7}
+## 🧩 7. Instalação do Ponto de Controle
 
 Abra a pasta do software Ponto de Controle criado no C:\ e inicialize o aplicativo
 clicando no arquivo “smart-control-point.exe”
 ![img](./imagens/imgInstalacao/abrir_pdc.png)
 
-O software Ponto de controle vai estar disponível no endereço: **http://127.0.0.1:4000**.
+O software Ponto de controle vai estar disponível no endereço: **<http://127.0.0.1:4000>**.
 Para ingresso do sistema utilize:
 
 - Usuário: master
@@ -137,7 +135,7 @@ Criar API conforme modelo da imagem abaixo
 
 ---
 
-## 🔗 8. Instalação e Configuração do IntegradorGATEC {#cap8}
+## 🔗 8. Instalação e Configuração do IntegradorGATEC
 
 Essa aplicação é responsável por buscar os acessos no Gatec e criar no ponto de controle, ele também é responsável por salvar as informações de pesagem na tabela “gatec_smart”.
 
@@ -153,7 +151,7 @@ Após isso, edite o campo "GATEC_API_KEY" e insira a chave API criada no item 7.
 Depois disso, de permissão completa ao usuário "IntegradorGatec" no Ponto de Controle
 ![img](./imagens/imgInstalacao/usuario_gatec.png)
 
-Clique duas vezes no ícone marcado na imagem 
+Clique duas vezes no ícone marcado na imagem
 ![img](./imagens/imgInstalacao/permissao_api.png)
 
 Aplique as configurações clicando em "Aplicar".
@@ -164,4 +162,4 @@ Inicie o integrador GATEC clicando duas vezes no arquivo "saturno.gatec.importer
 **O integrador funcionará corretamente somente depois que a equipe Gatec copular o
 banco “gatec_smart” com seu script.**
 
-As APIs do GATEC e do Ponto de Controle estarão disponíveis no endereço: **http://127.0.0.1:5000**
+As APIs do GATEC e do Ponto de Controle estarão disponíveis no endereço: **<http://127.0.0.1:5000>**
