@@ -1,6 +1,6 @@
 # 🛠 Manual de Instalação SLC
 
-> Versão 2.0 | Atualizado em: 13/05/2025
+> Versão 3.0 | Atualizado em: 16/05/2025
 
 ---
 
@@ -26,6 +26,7 @@
 - [3.1 Configuração Banco "gatec_smart"](#31-cbgs)
 - [3.2 Configuração chave API](#32-cca)
 - [3.3 Configuração de Serviços do Windows](#33-csw)
+- [3.4 Configuração Loge](#34-cl)
 
 ---
 
@@ -222,14 +223,14 @@ No menu de configurações de conexão, preencha os campos da seguinte forma:
 
     Altere os parâmetros da URL conforme abaixo:
 
-    - `username`: `smart`
+    - `username`: `root`
     - `password`: `Baloo001`
     - `db_name`: `pc_v3`
     (Caso tenha utilizado credenciais ou nome de banco diferentes, substitua pelos corretos.)
 - **URL Ponto de Controle:** `http://localhost:4000`
 - **Porta:** Por padrão, a porta é 5000. No entanto, para evitar conflito com o integrador GATEC:
     - Se o integrador estiver utilizando a porta 5000, defina 5001 aqui.
-    - Se o integrador estiver em 5001, mantenha 5000 para o Loge. 
+    - Se o integrador estiver em 5001, mantenha 5000 para o Loge.
 Clique em "Instalar" para prosseguir.
 
 ![img](./imagens/imgInstSlc/log_5.png)
@@ -297,5 +298,20 @@ Siga os passos abaixo:
 - Novamente, clique com o botão direito e selecione "Executar como administrador".
 
 ![img](./imagens/imgInstSlc/services_1.png)
+
+## 📌 3.4 Configuração Loge {#34-cl}
+
+Para criar um atalho para o Loge dentro do Ponto de Controle, é necessário configurar a URL base onde o Loge está instalado.
+
+Acesse o Ponto de Controle e navegue até o menu:
+"Administração > Configuração > Atalhos".
+![img](./imagens/imgInstSlc/log_7.png)
+
+No campo "Endereço do Loge Dashboard", insira a URL base do Loge, incluindo o prefixo http://.
+Em seguida, clique em "Salvar".
+![img](./imagens/imgInstSlc/log_8.png)
+
+Após salvar, um atalho para o Dashboard do Loge será exibido na tela inicial do Ponto de Controle.
+![img](./imagens/imgInstSlc/log_9.png)
 
 ---
